@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/login_profile.png">
+    <link th:href="@{/css/register.css}" rel="stylesheet"/>
+</head>
+<body>
+    <div class="scene flex">
+        <section class="card">
+          <h1 class="card__heading">
+            <span class="visually-hidden">Account name:</span>
+            <span name="memberId">
+              Sign up 
+            </span>
+          </h1>
+            <form class="card__form" action="/register" method="post">
+                <input type="text" name="memberId" 
+                th:placeholder="'User Id'"><br>
+                <input type="password" name="memberPw" 
+                th:value="${session.member.memberPw}" th:placeholder="'Password'"><br>
+                <div id="idError" style="display: none;">같은 User Id가 존재합니다</div>
+                <button class="card__button" type="submit">Sign up</button>
+            </form>
+        </section>
+      </div>
+</body>
+</html>

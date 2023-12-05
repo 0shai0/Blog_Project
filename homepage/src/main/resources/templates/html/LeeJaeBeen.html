@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeeJaeBeen</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/home_icon_left.png">
+  <script defer src="/js/scroller.js"></script>
+  <link th:href="@{/css/frame.css}" rel="stylesheet"/>
+</head>
+<body>
+
+
+<!-- body1 -->
+
+  <div class="body-container" id="body1">
+   
+   
+
+   <!-- 로딩창 -->
+
+
+    <div id="loading">
+      <div class="divider" aria-hidden="true"></div>
+      <p class="loading-text" aria-label="Loading">
+        <span class="letter" aria-hidden="true">L</span>
+        <span class="letter" aria-hidden="true">o</span>
+        <span class="letter" aria-hidden="true">a</span>
+        <span class="letter" aria-hidden="true">d</span>
+        <span class="letter" aria-hidden="true">i</span>
+        <span class="letter" aria-hidden="true">n</span>
+        <span class="letter" aria-hidden="true">g</span>
+      </p>
+    </div>
+
+
+<!-- 로딩창 -->
+
+
+
+<!-- 비디오 엘리먼트 -->
+
+    <video source src="/images/motion_graphics.mp4" autoplay loop muted type="video/mp4">
+    </video>
+
+<!-- 비디오 엘리먼트 -->
+
+
+
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+    <a th:href="@{/LeeJaeBeen}"><div class="letter top-left"><img src="/images/home_icon_left.png" onmouseover="this.src='/images/home_icon_left_negative.png'"
+      onmouseout="this.src='/images/home_icon_left.png'" class="left-img" style="position: relative; z-index: 1;"></div></a>
+    <div class="letter top-right">
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+        </label> 
+        <a href="mailto:ljb6797@naver.com" class="menu-item"> <i class="fa fa-email"></i> <img src="/images/email.png" class="email"> </a>
+        <a th:href="@{/content}" class="menu-item"> <i class="fa fa-write_list"></i> <img src="/images/write_list.png" class="write_list"> </a> 
+        <a th:href="@{/write}" class="menu-item"> <i class="fa fa-write"></i> <img src="/images/write.png" class="write"> </a>
+      </nav>     
+          
+      <!-- 필터 -->
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="shadowed-goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+            <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+            <feComposite in2="shadow" in="goo" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+        </defs>
+      </svg>
+        <!-- 필터 -->
+    </div>
+    <a href="https://www.instagram.com/ijaebeen/" class="insta-link">
+      <div class="letter bottom-left">Instagram</div>
+    </a>
+    <a href="https://github.com/0shai0" class="gitbub-link">    
+      <div class="letter bottom-right">GitHub</div>
+    </a>
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+
+
+  </div>
+
+<!-- body1 -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- body2 -->
+
+
+
+  <div class="body-container" id="body2">
+
+
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+    <a th:href="@{/LeeJaeBeen}"><div class="letter top-left"><img src="/images/home_icon_left.png" onmouseover="this.src='/images/home_icon_left_negative.png'" onmouseout="this.src='/images/home_icon_left.png'" class="left-img"></div></a>
+    <div class="letter top-right">
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+        </label>
+        <a href="mailto:ljb6797@naver.com" class="menu-item"> <i class="fa fa-email"></i> <img src="/images/email.png" class="email"> </a>
+        <a th:href="@{/content}" class="menu-item"> <i class="fa fa-write_list"></i> <img src="/images/write_list.png" class="write_list"> </a> 
+        <a th:href="@{/write}" class="menu-item"> <i class="fa fa-write"></i> <img src="/images/write.png" class="write"> </a>
+      </nav>     
+          
+      <!-- 필터 -->
+
+      <defs>
+        <filter id="shadowed-goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+      </defs>
+
+        <!-- 필터 -->
+    </div>
+    <a href="https://www.instagram.com/ijaebeen/" class="insta-link">
+      <div class="letter bottom-left">Instagram</div>
+    </a>
+    <a href="https://github.com/0shai0" class="gitbub-link">    
+      <div class="letter bottom-right">GitHub</div>
+    </a>
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+
+
+  </div>
+
+
+<!-- body2 -->
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- body3 -->
+  
+  
+  <div class="body-container" id="body3">
+    <h1>I studied Japanese</h1><br>
+    <h1>After that, I became fascinated with presentation classes.</h1><br>
+    <h1>And I became more attracted to visual things.</h1>
+
+  
+        <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+    <a th:href="@{/LeeJaeBeen}"><div class="letter top-left"><img src="/images/home_icon_left.png" onmouseover="this.src='/images/home_icon_left_negative.png'" onmouseout="this.src='/images/home_icon_left.png'" class="left-img"></div></a>
+    <div class="letter top-right">
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+        </label>
+        <a href="mailto:ljb6797@naver.com" class="menu-item"> <i class="fa fa-email"></i> <img src="/images/email.png" class="email"> </a>
+        <a th:href="@{/content}" class="menu-item"> <i class="fa fa-write_list"></i> <img src="/images/write_list.png" class="write_list"> </a> 
+        <a th:href="@{/write}" class="menu-item"> <i class="fa fa-write"></i> <img src="/images/write.png" class="write"> </a>
+      </nav>     
+          
+      <!-- 필터 -->
+
+      <defs>
+        <filter id="shadowed-goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+      </defs>
+
+        <!-- 필터 -->
+    </div>
+    <a href="https://www.instagram.com/ijaebeen/" class="insta-link">
+      <div class="letter bottom-left">Instagram</div>
+    </a>
+    <a href="https://github.com/0shai0" class="gitbub-link">    
+      <div class="letter bottom-right">GitHub</div>
+    </a>
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+  
+  
+  </div>
+  
+  
+  
+  <!-- body3 -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- body4 -->
+  
+  
+  <div class="body-container" id="body4">
+    <h1>I made it with all my heart.</h1>
+    <h1>I was looking for something to rekindle my heart.</h1>
+  
+  
+  
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+    <a th:href="@{/LeeJaeBeen}"><div class="letter top-left"><img src="/images/home_icon_left.png" onmouseover="this.src='/images/home_icon_left_negative.png'" onmouseout="this.src='/images/home_icon_left.png'" class="left-img"></div></a>
+    <div class="letter top-right">
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+        </label>
+        <a href="mailto:ljb6797@naver.com" class="menu-item"> <i class="fa fa-email"></i> <img src="/images/email.png" class="email"> </a>
+        <a th:href="@{/content}" class="menu-item"> <i class="fa fa-write_list"></i> <img src="/images/write_list.png" class="write_list"> </a> 
+        <a th:href="@{/write}" class="menu-item"> <i class="fa fa-write"></i> <img src="/images/write.png" class="write"> </a>
+      </nav>     
+          
+      <!-- 필터 -->
+
+      <defs>
+        <filter id="shadowed-goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+      </defs>
+
+        <!-- 필터 -->
+    </div>
+    <a href="https://www.instagram.com/ijaebeen/" class="insta-link">
+      <div class="letter bottom-left">Instagram</div>
+    </a>
+    <a href="https://github.com/0shai0" class="gitbub-link">    
+      <div class="letter bottom-right">GitHub</div>
+    </a>
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+  
+  
+  </div>
+  
+  
+  <!-- body4 -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- body5 -->
+  
+  
+  <div class="body-container" id="body5">
+
+
+    <h1>And now..</h1><br> 
+    <h1>I made this homepage!!</h1><br><br><br><br>
+    <h1>Everything is connected</h1>
+  
+  
+  
+  
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+    <a th:href="@{/LeeJaeBeen}"><div class="letter top-left"><img src="/images/home_icon_left.png" onmouseover="this.src='/images/home_icon_left_negative.png'" onmouseout="this.src='/images/home_icon_left.png'" class="left-img"></div></a>
+    <div class="letter top-right">
+      <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+        </label>
+        <a href="mailto:ljb6797@naver.com" class="menu-item"> <i class="fa fa-email"></i> <img src="/images/email.png" class="email"> </a>
+        <a th:href="@{/content}" class="menu-item"> <i class="fa fa-write_list"></i> <img src="/images/write_list.png" class="write_list"> </a> 
+        <a th:href="@{/write}" class="menu-item"> <i class="fa fa-write"></i> <img src="/images/write.png" class="write"> </a>
+      </nav>     
+          
+      <!-- 필터 -->
+
+      <defs>
+        <filter id="shadowed-goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+      </defs>
+
+        <!-- 필터 -->
+    </div>
+    <a href="https://www.instagram.com/ijaebeen/" class="insta-link">
+      <div class="letter bottom-left">Instagram</div>
+    </a>
+    <a href="https://github.com/0shai0" class="gitbub-link">    
+      <div class="letter bottom-right">GitHub</div>
+    </a>
+    <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+  
+  
+  </div>
+  
+  </body>
+  <link th:href="@{/css/loading.css}" rel="stylesheet"/>
+  </html>
+  
+  
+  <!-- body5 -->

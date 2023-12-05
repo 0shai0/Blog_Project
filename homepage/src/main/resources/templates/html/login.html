@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/login_profile.png">
+    <link th:href="@{/css/login.css}" rel="stylesheet"/>
+</head>
+<body>
+    <div class="scene flex">
+        <section class="card">
+          <figure class="card__figure">
+            <img class="card__image" src="/images/login_profile.png"/>
+            <figcaption>
+              <span class="visually-hidden">
+                Avatar photo
+              </span>
+            </figcaption>
+          </figure>
+          <h1 class="card__heading">
+            <span class="visually-hidden">Account name:</span>
+            <span name="memberId">
+              <!-- 0shai0 -->
+              <p th:text="${member[#lists.size(member) - 1].memberId}"></p>
+            </span>
+          </h1>
+          <form class="card__form" th:action="@{/LeeJaeBeen}" method="get">
+            <label for="password" class="visually-hidden">Password:</label>
+            <input id="password" class="card__input" type="password" name="memberPw" placeholder="Password"/>
+            <div id="passwordError" style="display: none;">비밀번호를 다시 입력해주십시요</div>
+            <input type="hidden" id="lastEnteredPassword" th:value="${member[#lists.size(member) - 1].memberPw}"/>
+            <button class="card__button" type="submit" id="loginButton">Login</button>
+          </form>
+        </section>
+        <script type="text/javascript" th:src="@{/js/passwordcheck.js}"></script>
+      </div>
+</body>
+</html>

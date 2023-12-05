@@ -1,0 +1,125 @@
+/* VARIABLES */
+/* BASE */
+
+
+body {
+  color: #FEFEFE;
+  font: 100 100%/1.6 "Heebo", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+span{
+  font-family: 'Raleway', sans-serif;
+}
+
+#idError {
+  color:  rgba(255, 255, 255, 0.93);
+  text-shadow: 1px 1px 13px rgba(254, 254, 254, 0.75);
+  font-size: 0.9rem;
+  font-weight:550;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.scene {
+  background: rgba(255, 255, 255, 0.75) url("/images/login_photo.jpg") center/cover;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.card {
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(254, 254, 254, 0.075);
+  border: 1px solid rgba(254, 254, 254, 0.18);
+  border-radius: 22px;
+  box-shadow: 1px 1px 50px rgba(191, 183, 183, 0.75);
+  color: rgba(255, 255, 255, 0.93);
+  max-width: 300px;
+  overflow: hidden;
+  padding: 60px 40px 0px 40px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  width: 40vw;
+  height: 50vh;
+}
+
+.card__heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 10px rgba(180, 172, 172, 0.75);
+  margin-top: 36px;
+  margin-bottom: 30px;
+  color: rgb(70, 65, 65);
+}
+
+.card__form {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center;
+  height: 13vh;
+}
+
+input {
+  background: rgba(254, 254, 254, 0.075);
+  border: 2px solid rgb(226, 219, 219);
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
+  color: rgb(33, 33, 33);
+  display: block;
+  font-size: 1rem;
+  padding: 10px;
+  width: 75%;
+  font-family:'Raleway', sans-serif;
+  padding: 8px 10px 8px 10px;
+}
+
+input:focus, input:active {
+  background: rgba(254, 254, 254, 0.08);
+  outline: none;
+}
+
+.card__button { 
+  background: rgba(255, 255, 255, 0.75);
+  border : rgba(254, 254, 254, 0.65);
+  box-shadow: 1px 1px 50px rgba(157, 154, 154, 0.75);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  padding: 8px 20px;
+  font-weight : 550;
+  color: rgb(98, 91, 91);
+  font-family:'Raleway', sans-serif;
+  height: 34px;
+}
+
+.card__button:focus, .card__button:active {
+  background: rgba(255, 255, 255, 0.75);
+  outline: none;
+}
+
+.card__button:hover {
+  cursor: pointer;
+}

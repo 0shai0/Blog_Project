@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write place</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/home_icon_left.png">
+    <link th:href="@{/css/write.css}" rel="stylesheet"/>
+    <link th:href="@{/css/frame.css}" rel="stylesheet"/>
+    
+</head>
+<body>
+
+
+   <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+  <a th:href="@{/LeeJaeBeen}"><div class="letter top-left"><img src="/images/home_icon_left.png" onmouseover="this.src='/images/home_icon_left_negative.png'" onmouseout="this.src='/images/home_icon_left.png'" class="left-img"></div></a>
+  <div class="letter top-right">
+      <nav class="menu">
+          <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+          <label class="menu-open-button" for="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          <a href="mailto:ljb6797@naver.com" class="menu-item"> <i class="fa fa-email"></i> <img src="/images/email.png" class="email"> </a>
+          <a th:href="@{/content}" class="menu-item"> <i class="fa fa-write_list"></i> <img src="/images/write_list.png" class="write_list"> </a> 
+          <a th:href="@{/write}" class="menu-item"> <i class="fa fa-write"></i> <img src="/images/write.png" class="write"> </a>
+          
+      </nav>     
+        
+        <!-- filters -->
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+          <filter id="shadowed-goo">
+              
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+              <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+              <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+              <feComposite in2="shadow" in="goo" result="goo" />
+              <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+          <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+          </defs>
+      </svg>
+  </div>
+  <a href="https://www.instagram.com/ijaebeen/" class="insta-link">
+      <div class="letter bottom-left">Instagram</div>
+  </a>
+  <a href="https://github.com/0shai0" class="gitbub-link">    
+      <div class="letter bottom-right">GitHub</div>
+  </a>
+  <!-- 상단좌측, 상단우측, 하단좌측, 하단우측 -->
+
+
+
+  <!-- 글쓰기 공간 -->
+  <div class="write_place">
+    <h1 class="write_title">Content Write Place</h1>
+        <input type="text" placeholder="제목을 입력하세요"><br><br>
+        <textarea placeholder="내용을 입력하세요"></textarea><br><br>
+        <button type="submit">Upload</button>
+  </div>
+
+
+</body>
+</html>
