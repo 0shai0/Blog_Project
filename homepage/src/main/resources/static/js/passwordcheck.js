@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
         } else {
             errorDiv.style.display = 'none';
-            // window.location.href = '/LeeJaeBeen';
         }
     });
 });
